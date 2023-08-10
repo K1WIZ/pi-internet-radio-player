@@ -2,14 +2,29 @@
 <html>
 <head>
     <title>Volume Control</title>
+    <style>
+        #volumePercentage {
+            font-weight: bold;
+            margin-left: 14px;
+        }
+    </style>
 </head>
 <body>
     <h2>Adjust Volume</h2>
     <form action="adjust_volume.php" method="post">
         <label for="volume">Volume Level:</label>
-        <input type="range" id="volume" name="volume" min="0" max="100" step="1">
+        <input type="range" id="volume" name="volume" min="0" max="100" step="1" oninput="updateVolumePercentage()">
         <input type="submit" value="Set Volume">
+        <span id="volumePercentage">0%</span>
     </form>
+
+    <script>
+        function updateVolumePercentage() {
+            const volumeSlider = document.getElementById("volume");
+            const volumePercentage = document.getElementById("volumePercentage");
+            const value = volumeSlider.value;
+            volumePercentage.innerText = value + "%";
+        }
+    </script>
 </body>
 </html>
-
