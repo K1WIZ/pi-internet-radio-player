@@ -13,8 +13,10 @@ if (($handle = fopen($csvFilePath, 'r')) !== false) {
 
 // Function to play selected stream and kill existing mplayer processes
 function playStream($url) {
-    shell_exec('sudo /usr/bin/killall mplayer');
-    $command = "sudo /usr/bin/screen -m -d mplayer -ao alsa:device=hw=3.0 $url";
+    //shell_exec('sudo /usr/bin/killall mplayer');   // changed from mplayer to vlc to support https streams
+    shell_exec('sudo /usr/bin/killall vlc');
+    //$command = "sudo /usr/bin/screen -m -d mplayer -ao alsa:device=hw=3.0 $url";  // changed from mplayer to vlc to support https streams
+    $command = "sudo runuser -l orangepi -c 'cvlc --alsa-audio-device default:CARD=USB $url >/dev/null 2>&1 &'";
     shell_exec($command);
 }
 
