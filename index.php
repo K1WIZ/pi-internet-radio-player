@@ -24,7 +24,7 @@
 
     function displayRecords($records) {
         echo '<h2>Station Presets:</h2>';
-        echo '<table border="1">';
+        echo '<table border="0">';
         echo '<tr><th>Preset Number</th><th>URL</th><th>Edit</th><th>Delete</th></tr>';
         foreach ($records as $recordNumber => $url) {
             echo '<tr>';
