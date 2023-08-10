@@ -13,3 +13,6 @@ hope you enjoy the project as much as I do!
 
 Project website & documentation:
 https://wizworks.net/orangepi-zero-3-internet-radio-player
+
+Web UI Screenshot:
+![](https://wizworks.net/wp-content/uploads/2023/08/image-1-1024x879.png)
