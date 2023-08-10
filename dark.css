@@ -19,6 +19,7 @@ input[type=text],
 input[type=email],
 input[type=date],
 input[type=number],
+input[type=url],
 textarea {
 	background-color: #555;
 	border: none;
