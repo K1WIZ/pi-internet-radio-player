@@ -3,7 +3,7 @@
 <head>
     <title>Net Radio Tuner</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="stylesheet" href="../dark.css">
+    <link rel="stylesheet" href="./dark.css">
 </head>
 <body><center>
     <h1>Net Radio Tuner</h1>
