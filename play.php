@@ -16,10 +16,17 @@ function stopStream() {
     shell_exec('sudo /usr/bin/killall vlc');
 }
 
+function readOutputFile() {
+    $outputFile = '/etc/ntune/output.conf';
+    $output = file_get_contents($outputFile);
+    return $output;
+}
+
 // Function to play selected stream and kill existing mplayer processes
 function playStream($url) {
     stopStream();
-    $command = "sudo runuser -l orangepi -c 'cvlc --alsa-audio-device default:CARD=USB $url >/dev/null 2>&1 &'";
+    $output = readOutputFile();
+    $command = "sudo runuser -l orangepi -c 'cvlc --alsa-audio-device default:CARD=$output $url >/dev/null 2>&1 &'";
     shell_exec($command);
 }
 

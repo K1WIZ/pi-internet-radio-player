@@ -9,6 +9,7 @@
     <h1>Net Radio Tuner</h1>
     <?php include './play.php'; ?>
     <?php include './volume.html'; ?>
+    <?php include './output.php'; ?>
     <?php
 
     $filename = '/opt/stations.csv';
