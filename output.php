@@ -31,10 +31,9 @@ $outputOptionsArray = explode("\n", trim($outputOptions));
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sound Output Configuration</title>
 </head>
 <body>
-    <h1>Sound Output Configuration</h1>
+    <h2>Sound Output Configuration</h2>
     <form method="POST" action="">
         <?php
         foreach ($outputOptionsArray as $option) {
